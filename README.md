@@ -1,6 +1,6 @@
 # IG_Phishing
 
-Hi folks, this is an advanced phishing page of a popular platform Instagram which can be used to steal credentials sophisticatedly.
+Hi folks, this is an advanced phishing page of a popular platform Instagram which can be used to steal credentials sophisticatedly. This is the same type of phishing page which cybercriminals used back in 2022 to steal the credentials of massive accounts posing as Facebook team through a **Blue Badge** phishing campaign.
 
 # How it works? (Logic)
 1. Asks the victim to enter his/her username and click on **Proceed** button.
