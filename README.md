@@ -11,3 +11,6 @@ Hi folks, this is an advanced phishing page of a popular platform Instagram whic
 
 # Disclaimer
 This is just for educational purpose and I won't be fucking responsible for any misuse of this code to harvest credentials.
+
+# Demo
+![2024-10-29 14-08-38](https://github.com/user-attachments/assets/cbe28c25-f4ca-4656-91bf-94efffbf58bb)
