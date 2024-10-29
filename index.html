@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram &bull; Blue Badge Verification</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            background-color: #FDFBFE;
+        }
+
+        section#navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px 15px;
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            background-color: #FDFBFE;
+        }
+
+        .ig_logo {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            grid-gap: 5px;
+        }
+
+        .logo_txt {
+            font-family: "Lobster", sans-serif;
+            font-weight: 450;
+            font-style: normal;
+            font-size: 30px;
+        }
+
+        .blue_badge {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: flex-end;
+            grid-gap: .5em;
+        }
+
+        .blue_badge_txt {
+            font-size: 20px;
+        }
+
+        .mobile_menu {
+            display: none;
+            visibility: hidden;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 8em;
+            background-color: #FFF;
+        }
+
+        .animated_gif img {
+            width: 200px;
+        }
+
+        .badge_heading {
+            font-size: 1.5em;
+        }
+
+        .heading {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            grid-gap: .5em;
+        }
+
+
+        .heading_txt {
+            text-transform: capitalize;
+            font-size: 30px;
+            color: #6B6B72;
+            font-weight: bolder;
+        }
+
+        #main {
+            max-width: 100%;
+        }
+
+        .form {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: fit-content;
+            border: 1px solid lightgrey;
+            border-radius: 8px;
+            padding: 30px;
+        }
+
+        .main_txt {
+            text-align: center;
+            color: #6B6B72;
+            margin: 2em 30em 0 30em;
+        }
+
+        .request_eval_btn {
+            margin-top: 1em;
+            border: none;
+            outline: none;
+            padding: 10px 15px;
+            background-color: #0095F6;
+            color: #FFF;
+            font-size: 20px;
+            letter-spacing: .5px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 2.5em;
+            text-align: center;
+            color: #6B6B72;
+            text-transform: capitalize;
+            font-size: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            grid-gap: .5em;
+            color: grey;
+        }
+
+        .logo_svg img {
+            width: 200px;
+        }
+
+        .username_txt {
+            margin-top: 1em;
+            display: flex;
+            flex-direction: column;
+            grid-gap: .5em;
+            color: #6B6B72;
+        }
+
+        .input_field {
+            margin-top: 1em;
+            margin-bottom: .5em;
+        }
+
+        .input_field input {
+            width: 250px;
+            border-radius: 3px;
+            padding: 8px 10px;
+            border: none;
+            outline: 1px solid darkgrey;
+            background-color: #F5F5F5;
+            color: #9B9B9B;
+        }
+
+        .login_btn {
+            display: none;
+            visibility: hidden;
+            background-color: #0095F6;
+            color: #FFF;
+            font-size: 15px;
+            letter-spacing: .5px;
+            border-radius: 5px;
+            font-weight: bold;
+            width: 250px;
+            border: none;
+            outline: none;
+            margin-top: 1.5em;
+            padding: 8px 8px;
+            opacity: 0.7;
+        }
+
+        .confirm_btn {
+            display: none;
+            visibility: hidden;
+            margin-top: 1em;
+            border: none;
+            outline: none;
+            padding: 10px 15px;
+            background-color: #0095F6;
+            color: #FFF;
+            font-size: 20px;
+            letter-spacing: .5px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .main_login_btn {
+            display: none;
+            visibility: hidden;
+            margin-top: 1em;
+            border: none;
+            outline: none;
+            padding: 7px 10px;
+            background-color: #0095F6;
+            color: #FFF;
+            font-size: 15px;
+            letter-spacing: .5px;
+            border-radius: 5px;
+            font-weight: normal;
+            width: 250px;
+        }
+
+        .form_buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .postsArea {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .postLocation {
+            margin: 1em 0;
+        }
+
+        .postImage img {
+            width: 400px;
+        }
+
+        .likes_comments {
+            margin: 3em 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            grid-gap: 1em;
+        }
+
+        .likes,
+        .comments {
+            display: block;
+        }
+
+        .login_form {
+            padding: 20px;
+        }
+
+        .input_field {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            grid-gap: .2rem;
+        }
+
+        .input_checkbox input {
+            outline: none; border: none;
+        }
+
+        .pass_field input {
+            width: 200px;
+        }
+
+        .input_field_txt {
+            font-size: 12px;
+        }
+
+        .input_checkbox input[type=checkbox] {
+            width: fit-content;
+        }
+
+        .forgot_pass_lnk {
+            margin-top: 2em;
+        }
+
+        .forgot_pass_lnk a {
+            color: #23527F;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .profile_pic_area img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            .logo_txt,
+            .blue_badge {
+                display: none;
+                visibility: hidden;
+            }
+
+            .mobile_menu {
+                display: block;
+                visibility: visible;
+            }
+
+            .main_txt {
+                text-align: center;
+                color: #6B6B72;
+                margin: 2em 0;
+            }
+
+            .heading_txt {
+                font-size: 20px;
+            }
+
+            .logo img {
+                width: 80%;
+            }
+
+            ul {
+                display: flex;
+                grid-gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .postImage img {
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <section id="navbar">
+        <div class="ig_logo">
+            <div class="img"><img src="./images/nav_logo.png" alt="Instagram favicon"></div>
+            <div class="logo_txt">Instagram</div>
+        </div>
+        <div class="blue_badge">
+            <div class="badge_icon">
+                <svg aria-label="Verified" class="x1lliihq x1n2onr6" fill="rgb(0, 149, 246)" height="25" role="img"
+                    viewBox="0 0 40 40" width="25">
+                    <title>Verified</title>
+                    <path
+                        d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z"
+                        fill-rule="evenodd"></path>
+                </svg>
+            </div>
+            <div class="blue_badge_txt">
+                Blue Badge Verification
+            </div>
+        </div>
+        <div class="mobile_menu">
+            <div class="mobile_menu_icon">
+                <box-icon name='menu'></box-icon>
+            </div>
+        </div>
+    </section>
+    <!-- Navbar End -->
+
+    <!-- Main Section Start -->
+    <section id="main">
+        <div class="form">
+            <div class="form_change">
+                <div class="logo">
+                    <img src="./images/animated_main_logo.gif" alt="Main Logo">
+                </div>
+                <div class="heading">
+                    <div class="heading_txt">account verification request</div>
+                    <div class="badge_icon">
+                        <svg aria-label="Verified" class="x1lliihq x1n2onr6" fill="rgb(0, 149, 246)" height="25"
+                            role="img" viewBox="0 0 40 40" width="25">
+                            <title>Verified</title>
+                            <path
+                                d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="main_txt">
+                    <div class="main_txt_msg">
+                        Verified badges help people more <br />
+                        easily find the public figures, <br />
+                        celebrities and brands they want to <br />
+                        follow. Learn more: To request a <br />
+                        verified badge: If you think you meet <br />
+                        the criteria, submit the form and <br />
+                        request an evaluation, our support <br />
+                        team will return to you by mail within <br />
+                        an average of 3 working days.
+                    </div>
+                    <button class="request_eval_btn">Request Evaluation</button>
+                </div>
+            </div>
+            <div class="form_buttons">
+                <button class='login_btn' disabled>
+                    Proceed
+                </button>
+                <button class='confirm_btn'>
+                    Confirm
+                </button>
+                <button class='main_login_btn'>
+                    Log in
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Main Section End -->
+
+    <!-- Footer Start -->
+    <footer>
+        <ul>
+            <li>Meta</li>
+            <li>About</li>
+            <li>Blog</li>
+            <li>Jobs</li>
+            <li>Help</li>
+            <li>API</li>
+            <li>Privacy</li>
+            <li>Terms</li>
+            <li>Top Accounts</li>
+            <li>Hashtags</li>
+            <li>Locations</li>
+            <li>Instagram Lite</li>
+        </ul>
+    </footer>
+    <!-- Footer End -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
